@@ -1,3 +1,28 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-house",
+      "description": "A modern suburban house on a sunny day",
+      "imageUrl": "https://images.unsplash.com/photo-1592595896616-c37162298647?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzdWJ1cmJhbiUyMGhvdXNlfGVufDB8fHx8MTc2Nzg5NjE3MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "suburban house"
+    },
+    {
+      "id": "testimonial-avatar-1",
+      "description": "Portrait of a smiling middle-aged woman",
+      "imageUrl": "https://images.unsplash.com/photo-1618938700817-fe48bd93f20b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzbWlsaW5nJTIwd29tYW58ZW58MHx8fHwxNzY3ODQ4NDQ3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "smiling woman"
+    },
+    {
+      "id": "testimonial-avatar-2",
+      "description": "Portrait of a happy senior man",
+      "imageUrl": "https://images.unsplash.com/photo-1659714962352-434900f95a91?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxoYXBweSUyMG1hbnxlbnwwfHx8fDE3Njc5MDM4MDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "happy man"
+    },
+    {
+      "id": "testimonial-avatar-3",
+      "description": "Portrait of a young couple",
+      "imageUrl": "https://images.unsplash.com/photo-1491582990992-68ec88e070a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxoYXBweSUyMGNvdXBsZXxlbnwwfHx8fDE3Njc4MjM3NjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "happy couple"
+    }
+  ]
 }
