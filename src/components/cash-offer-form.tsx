@@ -121,7 +121,7 @@ export function CashOfferForm() {
                   <FormItem>
                     <FormLabel>Property Address</FormLabel>
                     <FormControl>
-                      <Input placeholder="123 Main St, Anytown, USA" {...field} autoComplete="address-line1" />
+                      <Input placeholder="123 Main St, Anytown, USA" {...field} name="street-address" autoComplete="street-address" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
