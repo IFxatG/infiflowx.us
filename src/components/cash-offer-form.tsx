@@ -24,6 +24,7 @@ export function CashOfferForm() {
 
   const form = useForm<CashOfferFormValues>({
     resolver: zodResolver(cashOfferSchema),
+    mode: 'onChange', // Validate on input change
     defaultValues: {
       fullName: '',
       emailAddress: '',
