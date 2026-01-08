@@ -24,12 +24,15 @@ export function CashOfferForm() {
 
   const form = useForm<CashOfferFormValues>({
     resolver: zodResolver(cashOfferSchema),
-    mode: 'onChange', // Validate on input change
+    mode: 'onChange',
     defaultValues: {
       fullName: '',
       emailAddress: '',
       phoneNumber: '',
-      propertyAddress: '',
+      streetAddress: '',
+      city: '',
+      state: '',
+      zipCode: '',
       propertyDetails: '',
     },
   });
@@ -116,17 +119,59 @@ export function CashOfferForm() {
               />
               <FormField
                 control={form.control}
-                name="propertyAddress"
+                name="streetAddress"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Property Address</FormLabel>
+                    <FormLabel>Street Address</FormLabel>
                     <FormControl>
-                      <Input placeholder="123 Main St, Anytown, USA" {...field} name="street-address" autoComplete="street-address" />
+                      <Input placeholder="123 Main St" {...field} autoComplete="street-address" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
               />
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <FormField
+                  control={form.control}
+                  name="city"
+                  render={({ field }) => (
+                    <FormItem className="sm:col-span-1">
+                      <FormLabel>City</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Anytown" {...field} autoComplete="address-level2" />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="state"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>State</FormLabel>
+                      <FormControl>
+                        <Input placeholder="CA" {...field} autoComplete="address-level1" />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="zipCode"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Zip Code</FormLabel>
+                      <FormControl>
+                        <Input placeholder="12345" {...field} autoComplete="postal-code" />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+
               <FormField
                 control={form.control}
                 name="propertyDetails"

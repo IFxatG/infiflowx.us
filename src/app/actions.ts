@@ -1,7 +1,7 @@
 'use server';
 
 import { cashOfferSchema, type CashOfferFormValues } from './form-schema';
-import { generateCashOffer, type GenerateCashOfferOutput } from '@/ai/flows/generate-cash-offer';
+import { generateCashOffer, type GenerateCashOfferOutput, type GenerateCashOfferInput } from '@/ai/flows/generate-cash-offer';
 
 type ActionState = {
   offer?: GenerateCashOfferOutput;
@@ -20,7 +20,15 @@ export async function getCashOfferAction(values: CashOfferFormValues): Promise<A
   }
 
   try {
-    const offer = await generateCashOffer(validatedFields.data);
+    const { streetAddress, city, state, zipCode, ...rest } = validatedFields.data;
+    const propertyAddress = `${streetAddress}, ${city}, ${state} ${zipCode}`;
+    
+    const aiInput: GenerateCashOfferInput = {
+      ...rest,
+      propertyAddress,
+    };
+    
+    const offer = await generateCashOffer(aiInput);
     return { offer, message: 'Success! Here is your cash offer.' };
   } catch (e) {
     console.error(e);
