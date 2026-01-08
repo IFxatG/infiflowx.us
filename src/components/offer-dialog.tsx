@@ -31,7 +31,7 @@ export default function OfferDialog({ isOpen, onOpenChange, offer }: OfferDialog
       <DialogContent className="sm:max-w-md p-8">
         <DialogHeader>
           <div className="flex justify-center mb-4">
-            <CheckCircle2 className="h-16 w-16 text-green-600" />
+            <CheckCircle2 className="h-16 w-16 text-success" />
           </div>
           <DialogTitle className="text-center text-3xl font-headline text-primary">Congratulations!</DialogTitle>
           <DialogDescription className="text-center text-muted-foreground pt-2">We've generated a preliminary cash offer for your property.</DialogDescription>
