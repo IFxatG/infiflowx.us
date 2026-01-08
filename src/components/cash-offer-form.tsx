@@ -81,7 +81,7 @@ export function CashOfferForm() {
                   <FormItem>
                     <FormLabel>Full Name</FormLabel>
                     <FormControl>
-                      <Input placeholder="John Doe" {...field} />
+                      <Input placeholder="John Doe" {...field} autoComplete="name" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -94,7 +94,7 @@ export function CashOfferForm() {
                   <FormItem>
                     <FormLabel>Email Address</FormLabel>
                     <FormControl>
-                      <Input placeholder="you@example.com" {...field} type="email" />
+                      <Input placeholder="you@example.com" {...field} type="email" autoComplete="email" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -107,7 +107,7 @@ export function CashOfferForm() {
                   <FormItem>
                     <FormLabel>Phone Number</FormLabel>
                     <FormControl>
-                      <Input placeholder="(123) 456-7890" {...field} type="tel" />
+                      <Input placeholder="(123) 456-7890" {...field} type="tel" autoComplete="tel" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -120,7 +120,7 @@ export function CashOfferForm() {
                   <FormItem>
                     <FormLabel>Property Address</FormLabel>
                     <FormControl>
-                      <Input placeholder="123 Main St, Anytown, USA" {...field} />
+                      <Input placeholder="123 Main St, Anytown, USA" {...field} autoComplete="street-address" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
