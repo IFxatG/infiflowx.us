@@ -4,8 +4,6 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack -p 9002",
-    "genkit:dev": "genkit start -- tsx src/ai/dev.ts",
-    "genkit:watch": "genkit start -- tsx --watch src/ai/dev.ts",
     "build": "NODE_ENV=production next build && npx @opennextjs/cloudflare build --skipBuild && mv .open-next/worker.js .open-next/_worker.js && cp public/_routes.json .open-next/_routes.json",
     "build:next": "NODE_ENV=production next build",
     "pages:build": "npm run build:next && npx @opennextjs/cloudflare build --skipBuild && mv .open-next/worker.js .open-next/_worker.js && cp public/_routes.json .open-next/_routes.json",
