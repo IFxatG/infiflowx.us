@@ -231,7 +231,7 @@ function Footer() {
               &copy; {new Date().getFullYear()} QuickCash Homes. All rights reserved.
             </p>
             <p className="text-sm text-primary-foreground/50 mt-1">
-              a branch of Bluerock Partner Group LLC
+              Bluerock Partner Group LLC
             </p>
           </div>
         </div>
