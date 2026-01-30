@@ -12,14 +12,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Loader2 } from 'lucide-react';
-import OfferDialog from './offer-dialog';
-import type { GenerateCashOfferOutput } from '@/ai/flows/generate-cash-offer';
 import { useToast } from '@/hooks/use-toast';
 
 export function CashOfferForm() {
   const [isPending, setIsPending] = useState(false);
-  const [isDialogOpen, setDialogOpen] = useState(false);
-  const [offer, setOffer] = useState<GenerateCashOfferOutput | undefined>(undefined);
   const { toast } = useToast();
 
   const form = useForm<CashOfferFormValues>({
@@ -42,9 +38,13 @@ export function CashOfferForm() {
 
     const result = await getCashOfferAction(values);
     
-    if (result.offer) {
-      setOffer(result.offer);
-      setDialogOpen(true);
+    if (result.success) {
+      // Show success message
+      toast({
+        title: "Success!",
+        description: result.message || "We received your information and will contact you shortly.",
+        variant: "default",
+      });
       form.reset();
     } else {
       const errors = result.errors;
@@ -196,13 +196,6 @@ export function CashOfferForm() {
           </Form>
         </CardContent>
       </Card>
-      {offer && (
-        <OfferDialog
-          isOpen={isDialogOpen}
-          onOpenChange={setDialogOpen}
-          offer={offer}
-        />
-      )}
     </>
   );
 }
