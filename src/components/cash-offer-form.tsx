@@ -52,7 +52,7 @@ export function CashOfferForm() {
         Object.keys(errors).forEach((key) => {
           const field = key as keyof CashOfferFormValues;
           const message = errors[field as keyof typeof errors]?.[0];
-          if (message && form.hasUncontrolledError(field)) {
+          if (message) {
             form.setError(field, { type: 'server', message });
           }
         });
