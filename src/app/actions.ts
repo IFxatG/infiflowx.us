@@ -26,6 +26,7 @@ export async function getCashOfferAction(values: CashOfferFormValues): Promise<A
     const aiInput: GenerateCashOfferInput = {
       ...rest,
       propertyAddress,
+      propertyDetails: rest.propertyDetails ?? '',
     };
     
     const offer = await generateCashOffer(aiInput);
