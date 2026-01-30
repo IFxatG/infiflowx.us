@@ -226,9 +226,14 @@ function Footer() {
               QuickCash Homes
             </span>
           </div>
-          <p className="text-sm text-primary-foreground/50">
-            &copy; {new Date().getFullYear()} QuickCash Homes. All rights reserved.
-          </p>
+          <div className="text-center md:text-right">
+            <p className="text-sm text-primary-foreground/50">
+              &copy; {new Date().getFullYear()} QuickCash Homes. All rights reserved.
+            </p>
+            <p className="text-sm text-primary-foreground/50 mt-1">
+              a branch of Bluerock Partner Group LLC
+            </p>
+          </div>
         </div>
       </div>
     </footer>
