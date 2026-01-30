@@ -37,12 +37,13 @@ Your Next.js app is now configured for Cloudflare Pages deployment using **OpenN
    - Connect your GitHub repository
    
 3. **Configure Build Settings**:
+   - **Framework preset**: `None` (or `Next.js` if available)
    - **Build command**: `npm run pages:build`
    - **Build output directory**: `.open-next/worker`
    - **Root directory**: `/` (leave as default)
-   - **Node version**: `20.x` (set in Environment Variables)
-
-4. **Add Environment Variables** (if needed):
+   
+4. **Set Environment Variables**:
+   - Add `NODE_VERSION` = `20` (important for compatibility)
    - `GOOGLE_GENAI_API_KEY` - Your Google AI API key (for Genkit)
    - Any other environment variables your app needs
 

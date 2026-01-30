@@ -2,8 +2,5 @@ name = "infiflowx-us"
 compatibility_date = "2024-01-01"
 pages_build_output_dir = ".open-next/worker"
 
-[build]
-command = "npm run pages:build"
-
 [env.production]
 compatibility_date = "2024-01-01"
