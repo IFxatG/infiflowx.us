@@ -5,7 +5,6 @@ const config = {
       converter: 'edge',
     },
   },
-  buildCommand: '',
 }
 
 export default config
